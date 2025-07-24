@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
-  if (username === 'Aviator2025' && password === 'admin@pro') {
+  if (username === 'Aviatorpro2025' && password === 'admin@2025') {
     req.session.loggedIn = true;
     res.redirect('/index');
   } else {
