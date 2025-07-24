@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETHIO AVIATOR PREDICTOR PRO - Login</title>
+    <style>
+        :root {
+            --primary-blue: #1a237e;
+            --dark-blue: #0d1440;
+            --gold: #FFD700;
+            --light-gold: #FFEE58;
+            --white: #ffffff;
+            --gray: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .login-title {
+            color: var(--gold);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+            background: linear-gradient(to right, var(--gold), var(--light-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+        
+        .login-subtitle {
+            color: var(--white);
+            opacity: 0.8;
+            font-size: 1rem;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .input-group label {
+            display: block;
+            color: var(--gold);
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to right, var(--gold), var(--light-gold));
+            border: none;
+            border-radius: 8px;
+            color: var(--dark-blue);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+        }
+        
+        .login-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .login-footer {
+            text-align: center;
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        .login-footer a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .telegram-icon {
+            width: 18px;
+            height: 18px;
+        }
+        
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+            
+            .login-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1 class="login-title">Welcome to ETHIO AVIATOR PREDICTOR PRO</h1>
+            <p class="login-subtitle">Sign in to access your premium predictions</p>
+        </div>
+        
+        <form method="POST" action="/login">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="login-btn">LOGIN</button>
+        </form>
+        
+        <div class="login-footer">
+            <p><a href="https://t.me/ethioaviatorsupport" target="_blank" rel="noopener noreferrer">
+                <svg class="telegram-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.25 1.58-1.32 5.41-1.87 7.19-.14.47-.41.63-.68.63-.47 0-.74-.27-1.14-.52-.63-.44-1-.73-1.62-1.17-.56-.4-.2-.62.13-.99.09-.1 1.71-1.56 1.74-1.69.01-.07-.01-.11-.06-.15-.14-.08-.35-.05-.5-.03-.21.03-3.48 2.21-4.93 3.12-.51.32-.98.48-1.5.48-.32 0-.78-.1-1.18-.38-.87-.61-.64-1.88.13-3.15 1.36-2.26 3.13-4.39 4.93-6.37.47-.51.94-.76 1.47-.76.18 0 .35.02.5.07l2.38 1.01c.78.33 1.21 1.12 1.09 1.93z"/>
+                </svg>
+                Contact Support on Telegram
+            </a></p>
+        </div>
+    </div>
+</body>
+</html>
