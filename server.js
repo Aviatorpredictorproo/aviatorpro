@@ -35,6 +35,6 @@ app.get('/index', (req, res) => {
   }
 });
 
-app.listen(PORT, '127.0.0.1', () => {
-  console.log(`Server running at http://127.0.0.1:${PORT}`);
+app.listen(PORT, '10000', () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
