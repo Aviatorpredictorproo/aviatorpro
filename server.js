@@ -3,7 +3,7 @@ const session = require('express-session');
 const path = require('path');
 
 const app = express();
-const PORT = 8158;
+const PORT = 10000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
@@ -35,6 +35,6 @@ app.get('/index', (req, res) => {
   }
 });
 
-app.listen(PORT, '0.0.0.0.', () => {
-  console.log(`Server running at http://0.0.0.0:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
