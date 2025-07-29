@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    if (username === 'Aviatorpro' && password === 'admin@admin') {
+    if (username === 'Aviatorpro' && password === 'admin@2025') {
         req.session.loggedIn = true;
         return res.redirect('/dashboard');
     }
