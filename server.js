@@ -4,6 +4,7 @@ const session = require('express-session');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const isProduction = process.env.NODE_ENV === 'production';
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -14,7 +15,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: {
         maxAge: 30 * 60 * 1000,
-        secure: true,
+        secure: false,
         sameSite: 'lax'
     }
 }));
