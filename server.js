@@ -12,6 +12,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: { maxAge: 30 * 60 * 1000 }
+    secure: true,
+    samesite: 'lax'
 }));
 
 // Serve only public static files
