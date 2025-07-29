@@ -7,13 +7,16 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
+
 app.use(session({
     secret: 'super-secret-key',
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 30 * 60 * 1000 }
-    secure: true,
-    samesite: 'lax'
+    cookie: {
+        maxAge: 30 * 60 * 1000,
+        secure: true,
+        sameSite: 'lax'
+    }
 }));
 
 // Serve only public static files
