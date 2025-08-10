@@ -405,7 +405,28 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(249, 212, 35, 0.4);
         }
-       
+        
+        .terms-btn {
+            background: linear-gradient(to right, var(--accent), #ffde59);
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(249, 212, 35, 0.3);
+            margin: 15px 0;
+        }
+
+        .terms-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(246, 212, 35, 0.4);
+        }
+
         .legal-warning {
             background: rgba(249, 212, 35, 0.15);
             border: 2px solid var(--accent);
@@ -547,9 +568,10 @@
         <footer>
             <p>© 2025 Aviator Predictor Pro. All rights reserved.</p>
             
-            <a href="privacy.html" class="privacy-btn">
+             <a href="privacy.html" class="privacy-btn">
                 <i class="fas fa-lock"></i> Privacy Policy
-            </a>
+            <a href="terms.html" class="terms-btn"></i> Terms of Service
+           </a>
              
             <div class="legal-warning">
                 <i class="fas fa-exclamation-triangle warning-icon"></i>
