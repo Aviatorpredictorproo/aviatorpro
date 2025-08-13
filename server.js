@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    if (username === 'admin3003' && password === '1a2b3c4d') {
+    if (username === 'admin2112' && password === '1a2b3c4d') {
         req.session.loggedIn = true;
         return res.redirect('/dashboard');
     }
